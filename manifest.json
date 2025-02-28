@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Easy Vision Comfort Tools - All-in-One Viewing Assistant",
+    "version": "1.0.0",
+    "description": "Advanced accessibility tools including color blindness simulation, read mode, and magnifier",
+    "permissions": [
+      "storage" 
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["js/content.js"],
+        "css": ["css/content.css"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["js/*", "css/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
